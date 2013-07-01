@@ -1,8 +1,8 @@
-//Author: Vincent Heuken
-//RndArty.sqf
-//Version 1.0
-//Script randomly fires artillery inside a marker
-//continously until object is destroyed
+// Author: Vincent Heuken
+// RndArty.sqf
+// Version 1.0
+// Script randomly fires artillery inside a marker
+// continously until object is destroyed
 
 //
 // USAGE:
@@ -12,15 +12,15 @@
 _marker = _this select 0;
 _obj = _this select 1;
 
-//pauses for 10 seconds to let players load up
+// pauses for 10 seconds to let players load up
 sleep 10;
 
-//gets center position of area marker;
+// gets center position of area marker;
 _centerPos = getMarkerPos _marker;
 _centerX = abs(_centerPos select 0);
 _centerY = abs(_centerPos select 1);
 
-//gets size of marker
+// gets size of marker
 _markerSize = getMarkerSize _marker;
 _sizeX = _markerSize select 0;
 _sizeY = _markerSize select 1;
@@ -28,12 +28,9 @@ _sizeY = _markerSize select 1;
 _sizeX = _sizeX/2;
 _sizeY = _sizeY/2;
 
-//while object is alive
+// while object is alive
 while {alive _obj} do
 {
-	//_x and _y are declared here first
-	//otherwise they wouldn't be declared in the loop's scope
-	//and the script wouldnt work
 	_x = 0;
 	_y = 0;
 
