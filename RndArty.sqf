@@ -1,8 +1,8 @@
 // Author: Vincent Heuken
 // RndArty.sqf
-// Version 1.0
+// Version 1.1
 // Script randomly fires artillery inside a marker
-// continously until object is destroyed
+// continuously until object is destroyed
 
 //
 // USAGE:
@@ -12,8 +12,6 @@
 _marker = _this select 0;
 _obj = _this select 1;
 
-// pauses for 10 seconds to let players load up
-sleep 10;
 
 // gets center position of area marker;
 _centerPos = getMarkerPos _marker;
